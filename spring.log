@@ -1,0 +1,103 @@
+2022-08-25 08:12:06.891  INFO 6804 --- [main] c.e.e.EmsKoltinApplicationTests          : Starting EmsKoltinApplicationTests using Java 11.0.15 on GOWTHAM with PID 6804 (started by user in C:\Users\user\Desktop\ems_koltin)
+2022-08-25 08:12:06.985  INFO 6804 --- [main] c.e.e.EmsKoltinApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2022-08-25 08:12:13.532  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 08:12:13.860  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 244 ms. Found 1 JPA repository interfaces.
+2022-08-25 08:12:13.860  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 08:12:13.875  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+2022-08-25 08:12:13.875  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 08:12:13.891  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2022-08-25 08:12:19.625  INFO 6804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 08:12:20.313  INFO 6804 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-25 08:12:21.938  INFO 6804 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-25 08:12:23.235  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-25 08:12:24.375  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-25 08:12:24.610  INFO 6804 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 08:12:27.266  INFO 6804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 08:12:27.313  INFO 6804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:12:27.625  INFO 6804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 08:12:27.750  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-25 08:12:27.766  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-25 08:12:27.766  INFO 6804 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 08:12:27.985  INFO 6804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 08:12:28.000  INFO 6804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:12:28.235  INFO 6804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 08:12:28.281  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-25 08:12:28.281  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-25 08:12:28.281  INFO 6804 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 08:12:28.344  INFO 6804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 08:12:28.344  INFO 6804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:12:34.235  INFO 6804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37b44e8e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11ec2b2f, org.springframework.security.web.context.SecurityContextPersistenceFilter@293ba26c, org.springframework.security.web.header.HeaderWriterFilter@3e563293, org.springframework.security.web.authentication.logout.LogoutFilter@20d92f1e, com.ems.ems_koltin.jwt_config.JwtFilter@759b05d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c981f76, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4844e24b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a70daf4, org.springframework.security.web.session.SessionManagementFilter@17873842, org.springframework.security.web.access.ExceptionTranslationFilter@594fcb22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1735e1c4]
+2022-08-25 08:12:34.485  INFO 6804 --- [main] org.eclipse.jetty.util.log               : Logging initialized @40531ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-08-25 08:12:34.938  WARN 6804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 08:12:36.281  INFO 6804 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:departmentdb', 'jdbc:h2:mem:employeedb', 'jdbc:h2:mem:usersdb'
+2022-08-25 08:12:38.235  WARN 6804 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-08-25 08:12:38.235  INFO 6804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-08-25 08:12:38.235  WARN 6804 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-08-25 08:12:38.235  INFO 6804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-08-25 08:12:38.235  WARN 6804 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-08-25 08:12:38.235  INFO 6804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-08-25 08:12:38.485  INFO 6804 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-25 08:12:38.750  INFO 6804 --- [main] c.e.e.EmsKoltinApplicationTests          : Started EmsKoltinApplicationTests in 34.059 seconds (JVM running for 44.797)
+2022-08-25 08:12:41.172  INFO 6804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:12:41.172  INFO 6804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-25 08:12:41.188  INFO 6804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-08-25 08:12:41.188  INFO 6804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:12:41.188  INFO 6804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:12:41.188  INFO 6804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-25 08:12:41.188  INFO 6804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-25 08:12:41.188  INFO 6804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-25 08:12:41.203  INFO 6804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-25 08:13:50.942  INFO 872 --- [main] c.ems.ems_koltin.EmsKoltinApplicationKt  : Starting EmsKoltinApplicationKt using Java 11.0.15 on GOWTHAM with PID 872 (C:\Users\user\Desktop\ems_koltin\target\classes started by user in C:\Users\user\Desktop\ems_koltin)
+2022-08-25 08:13:50.988  INFO 872 --- [main] c.ems.ems_koltin.EmsKoltinApplicationKt  : No active profile set, falling back to 1 default profile: "default"
+2022-08-25 08:13:54.582  INFO 872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 08:13:54.723  INFO 872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
+2022-08-25 08:13:54.723  INFO 872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 08:13:54.738  INFO 872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+2022-08-25 08:13:54.738  INFO 872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 08:13:54.754  INFO 872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2022-08-25 08:13:57.035  INFO 872 --- [main] org.eclipse.jetty.util.log               : Logging initialized @23343ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-08-25 08:13:57.535  INFO 872 --- [main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8080
+2022-08-25 08:13:57.535  INFO 872 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.15+8-LTS-149
+2022-08-25 08:13:57.660  INFO 872 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2022-08-25 08:13:57.660  INFO 872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6328 ms
+2022-08-25 08:13:58.082  INFO 872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-25 08:13:58.582  INFO 872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-25 08:13:58.629  INFO 872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-25 08:13:58.645  INFO 872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-25 08:13:58.645  INFO 872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-25 08:13:58.645  INFO 872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-25 08:13:58.645  INFO 872 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:departmentdb', 'jdbc:h2:mem:employeedb', 'jdbc:h2:mem:usersdb'
+2022-08-25 08:13:59.113  INFO 872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 08:13:59.317  INFO 872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-25 08:14:00.067  INFO 872 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-25 08:14:00.535  INFO 872 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 08:14:01.629  INFO 872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 08:14:01.645  INFO 872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:14:01.754  INFO 872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 08:14:01.801  INFO 872 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 08:14:01.879  INFO 872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 08:14:01.879  INFO 872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:14:01.895  INFO 872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 08:14:01.957  INFO 872 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 08:14:02.004  INFO 872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 08:14:02.004  INFO 872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 08:14:03.520  INFO 872 --- [main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2022-08-25 08:14:03.520  INFO 872 --- [main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2022-08-25 08:14:03.520  INFO 872 --- [main] org.eclipse.jetty.server.session         : node0 Scavenging every 660000ms
+2022-08-25 08:14:03.535  INFO 872 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@58945295{application,/,[file:///C:/Users/user/AppData/Local/Temp/jetty-docbase.8080.1302087575559362258/],AVAILABLE}
+2022-08-25 08:14:03.535  INFO 872 --- [main] org.eclipse.jetty.server.Server          : Started @29849ms
+2022-08-25 08:14:04.660  INFO 872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e7987b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bcfb561, org.springframework.security.web.context.SecurityContextPersistenceFilter@38d308e7, org.springframework.security.web.header.HeaderWriterFilter@4d6027be, org.springframework.security.web.authentication.logout.LogoutFilter@7bb86ac, com.ems.ems_koltin.jwt_config.JwtFilter@69cb134, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c6fabba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f2ab6ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7254a68a, org.springframework.security.web.session.SessionManagementFilter@3b80bb63, org.springframework.security.web.access.ExceptionTranslationFilter@5c194652, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f6c6c70]
+2022-08-25 08:14:04.738  WARN 872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 08:14:05.926  WARN 872 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-08-25 08:14:05.926  INFO 872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-08-25 08:14:05.926  WARN 872 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-08-25 08:14:05.926  INFO 872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-08-25 08:14:05.926  WARN 872 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-08-25 08:14:05.926  INFO 872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-08-25 08:14:05.973  INFO 872 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-25 08:14:06.129  INFO 872 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-25 08:14:06.129  INFO 872 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-25 08:14:06.129  INFO 872 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-08-25 08:14:06.176  INFO 872 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@da28d03{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-08-25 08:14:06.176  INFO 872 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8080 (http/1.1) with context path '/'
+2022-08-25 08:14:06.223  INFO 872 --- [main] c.ems.ems_koltin.EmsKoltinApplicationKt  : Started EmsKoltinApplicationKt in 18.263 seconds (JVM running for 32.535)

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ems.ems_koltin.EmsKoltinApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.213 s - in com.ems.ems_koltin.EmsKoltinApplicationTests

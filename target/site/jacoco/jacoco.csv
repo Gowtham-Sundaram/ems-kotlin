@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ems_koltin,com.ems.ems_koltin.db_config.user_db,UserDbConfig,0,41,0,0,0,5,0,4,0,4
+ems_koltin,com.ems.ems_koltin.service,EmpService,149,358,17,17,16,54,18,11,1,11
+ems_koltin,com.ems.ems_koltin.entity_dao.emp_entity,EmpEntity,13,85,0,0,0,9,4,8,4,8
+ems_koltin,com.ems.ems_koltin,EmsKoltinApplication,9,71,2,2,0,9,3,3,1,3
+ems_koltin,com.ems.ems_koltin,EmsKoltinApplicationKt,12,0,0,0,2,0,1,0,1,0
+ems_koltin,com.ems.ems_koltin.db_config.emp_db,EmpDbConfig,0,41,0,0,0,5,0,4,0,4
+ems_koltin,com.ems.ems_koltin.db_config.dept_db,DeptDbConfig,0,41,0,0,0,5,0,4,0,4
+ems_koltin,com.ems.ems_koltin.entity_dao.dept_entity,DeptEntity,4,40,0,0,0,6,1,5,1,5

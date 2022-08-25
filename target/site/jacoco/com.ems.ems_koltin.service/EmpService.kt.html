@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmpService.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ems_koltin</a> &gt; <a href="index.source.html" class="el_package">com.ems.ems_koltin.service</a> &gt; <span class="el_source">EmpService.kt</span></div><h1>EmpService.kt</h1><pre class="source lang-java linenums">package com.ems.ems_koltin.service
+
+import com.ems.ems_koltin.bean_dto.Department
+import com.ems.ems_koltin.bean_dto.Employee
+import com.ems.ems_koltin.entity_dao.dept_entity.DeptEntity
+import com.ems.ems_koltin.entity_dao.emp_entity.EmpEntity
+import com.ems.ems_koltin.repository.dept_repo.DepartmentRepo
+import com.ems.ems_koltin.repository.emp_repo.EmployeeRepo
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.beans.BeanUtils
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Service
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestBody
+import java.text.SimpleDateFormat
+import java.util.*
+
+
+<span class="fc" id="L22">@Service</span>
+<span class="fc" id="L23">class EmpService(@Autowired private val empRepo: EmployeeRepo, @Autowired private val deptRepo: DepartmentRepo) {</span>
+
+
+<span class="pc" id="L26">    var logger: Logger = LoggerFactory.getLogger(EmpService::class.java)</span>
+
+    private fun dateInfo(): String {
+<span class="fc" id="L29">        val formatter = SimpleDateFormat(&quot;dd/MM/yyyy HH:mm:ss&quot;)</span>
+<span class="fc" id="L30">        val date = Date()</span>
+<span class="fc" id="L31">        return formatter.format(date)</span>
+    }
+    fun saveEmployee(@RequestBody employee: Employee): ResponseEntity&lt;Any&gt; {
+<span class="fc" id="L34">        var empEntity = EmpEntity()</span>
+<span class="fc" id="L35">        BeanUtils.copyProperties(employee, empEntity)</span>
+<span class="fc" id="L36">        return try {</span>
+<span class="fc" id="L37">            empEntity = empRepo.save(empEntity)</span>
+<span class="fc" id="L38">            logger.info(&quot;Employee name ${empEntity.empName} saved @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L39">            ResponseEntity&lt;Any&gt;(empEntity, HttpStatus.CREATED)</span>
+<span class="nc" id="L40">        } catch (e: Exception) {</span>
+<span class="nc" id="L41">            logger.error(&quot;Unable to save user @ ${dateInfo()}, error occurred saveEmployee in service&quot;)</span>
+<span class="pc" id="L42">            ResponseEntity&lt;Any&gt;(StringBuilder(&quot;Unable to save employee&quot;), HttpStatus.INTERNAL_SERVER_ERROR)</span>
+        }
+    }
+    fun fetchEmployee(@PathVariable empId: Int): ResponseEntity&lt;Any&gt;? {
+<span class="fc" id="L46">        var empEntity: EmpEntity?=null</span>
+<span class="fc" id="L47">        return try {</span>
+<span class="fc" id="L48">            empEntity = empRepo.findOneByempId(empId)!!</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">            logger.info(&quot;empId ${empEntity?.empId} is accessed @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L50">            ResponseEntity&lt;Any&gt;(empEntity, HttpStatus.FOUND)</span>
+<span class="nc" id="L51">        } catch (e: Exception) {</span>
+<span class="nc" id="L52">            logger.warn(&quot;Wrong empId $empId entered to access @ ${dateInfo()}&quot;)</span>
+<span class="pc" id="L53">            ResponseEntity&lt;Any&gt;(StringBuilder(&quot;No Emp Found for given empId&quot;), HttpStatus.NOT_FOUND)</span>
+        }
+    }
+
+    fun updateEmployee(@PathVariable empId: Int, @RequestBody employee: Employee): String {
+<span class="fc" id="L58">        var empEntity: EmpEntity?=null</span>
+<span class="pc bpc" id="L59" title="2 of 4 branches missed.">        return if (fetchEmployee(empId)?.body is EmpEntity) {</span>
+<span class="pc bpc" id="L60" title="2 of 4 branches missed.">            empEntity = fetchEmployee(empId)?.body as EmpEntity</span>
+<span class="fc" id="L61">            BeanUtils.copyProperties(employee, empEntity)</span>
+<span class="fc" id="L62">            empRepo.save(empEntity)</span>
+<span class="fc" id="L63">            logger.info(&quot;Employee name ${employee.empName} is updated @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L64">            &quot;Employee Id: ${empEntity.empId} Employee Name: ${empEntity.empName}  Update Successful&quot;</span>
+        } else {
+<span class="nc" id="L66">            logger.info(&quot;Employee name ${employee.empName} is not found to update @ ${dateInfo()}&quot;)</span>
+<span class="nc" id="L67">            &quot;Employee does not exist&quot;</span>
+        }
+    }
+    fun deleteEmployee(@PathVariable empId: Int): String {
+        var empEntity: EmpEntity?
+<span class="pc bpc" id="L72" title="2 of 4 branches missed.">        return if (fetchEmployee(empId)?.body is EmpEntity) {</span>
+<span class="pc bpc" id="L73" title="2 of 4 branches missed.">            empEntity = fetchEmployee(empId)?.body as EmpEntity</span>
+<span class="fc" id="L74">            empRepo.delete(empEntity)</span>
+<span class="fc" id="L75">            logger.info(&quot;empId $empId is deleted successfully @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L76">            &quot;Employee Id: ${empEntity.empId} Employee Name: ${empEntity.empName} Delete Successful&quot;</span>
+        }
+        else {
+<span class="nc" id="L79">            logger.warn(&quot;empId $empId is not found to delete @ ${dateInfo()}&quot;)</span>
+<span class="nc" id="L80">            &quot;Deletion of emp failed&quot;</span>
+        }
+    }
+    fun saveDepartment(@RequestBody department: Department): ResponseEntity&lt;Any&gt; {
+<span class="fc" id="L84">        var deptEntity = DeptEntity()</span>
+<span class="fc" id="L85">        BeanUtils.copyProperties(department, deptEntity)</span>
+<span class="fc" id="L86">        return try{</span>
+<span class="fc" id="L87">            deptEntity=deptRepo.save(deptEntity)</span>
+<span class="fc" id="L88">            logger.info(&quot;Department name ${department.deptName} saved @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L89">            ResponseEntity&lt;Any&gt;(deptEntity, HttpStatus.CREATED)</span>
+        }
+<span class="nc" id="L91">        catch(e:Exception){</span>
+<span class="nc" id="L92">            logger.error(&quot;Unable to Department @ ${dateInfo()}&quot;)</span>
+<span class="pc" id="L93">            ResponseEntity&lt;Any&gt;(StringBuilder(&quot;Unable to save Department&quot;), HttpStatus.INTERNAL_SERVER_ERROR)</span>
+        }
+    }
+    fun fetchDepartment(@PathVariable deptId:Int):ResponseEntity&lt;Any&gt;?{
+<span class="fc" id="L97">        return try{</span>
+<span class="fc" id="L98">            var deptEntity:DeptEntity=deptRepo.findOneBydeptId(deptId)!!</span>
+<span class="fc" id="L99">            logger.info(&quot;deptId ${deptEntity.deptId} is accessed @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L100">            ResponseEntity&lt;Any&gt;(deptEntity, HttpStatus.FOUND)</span>
+        }
+<span class="nc" id="L102">        catch (e:Exception){</span>
+<span class="nc" id="L103">            logger.warn(&quot;Wrong deptId $deptId entered to access @ ${dateInfo()}&quot;)</span>
+<span class="pc" id="L104">            ResponseEntity&lt;Any&gt;(StringBuilder(&quot;No Emp Found for given deptId&quot;),HttpStatus.NOT_FOUND)</span>
+        }
+    }
+    fun updateDepartment(@PathVariable deptId:Int, @RequestBody department: Department): String{
+        var deptEntity:DeptEntity?
+<span class="pc bpc" id="L109" title="2 of 4 branches missed.">        return if(fetchDepartment(deptId)?.body is DeptEntity){</span>
+<span class="pc bpc" id="L110" title="2 of 4 branches missed.">            deptEntity=fetchDepartment(deptId)?.body as DeptEntity</span>
+<span class="fc" id="L111">            BeanUtils.copyProperties(department, deptEntity)</span>
+<span class="fc" id="L112">            deptRepo.save(deptEntity)</span>
+<span class="fc" id="L113">            logger.info(&quot;Department name ${department.deptName} is updated @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L114">            &quot;Department Id: ${deptEntity.deptId} Department Name: ${deptEntity.deptName}  Update Successful&quot;</span>
+        }
+        else{
+<span class="nc" id="L117">            logger.info(&quot;Department name ${department.deptName} is not found to update @ ${dateInfo()}&quot;)</span>
+<span class="nc" id="L118">            &quot;Department does not exist&quot;</span>
+        }
+    }
+    fun deleteDepartment(@PathVariable deptId:Int):String{
+        var deptEntity:DeptEntity?
+<span class="pc bpc" id="L123" title="2 of 4 branches missed.">            return if (fetchDepartment(deptId)?.body is DeptEntity){</span>
+<span class="pc bpc" id="L124" title="2 of 4 branches missed.">                deptEntity=fetchDepartment(deptId)?.body as DeptEntity</span>
+<span class="fc" id="L125">                deptRepo.delete(deptEntity)</span>
+<span class="fc" id="L126">                logger.info(&quot;deptId $deptId is deleted successfully @ ${dateInfo()}&quot;)</span>
+<span class="fc" id="L127">                &quot;Department Id: ${deptEntity.deptId} Department Name: ${deptEntity.deptName} Delete Successful&quot;</span>
+            }
+        else{
+<span class="nc" id="L130">            logger.warn(&quot;deptId $deptId is not found to delete @ ${dateInfo()}&quot;)</span>
+<span class="nc" id="L131">            &quot;Deletion of dept failed&quot;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
